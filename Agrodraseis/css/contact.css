@@ -1,0 +1,187 @@
+/* === CONTACT SECTION === */
+#contact {
+  background: var(--color-bg2);
+  color: var(--color-text);
+  padding: 100px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#contact .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contact .subtitle {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* === ΦΟΡΜΑ === */
+.contact-form {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px var(--color-shadow);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.contact-form h3 {
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.contact-form p {
+  margin-bottom: 25px;
+  color: var(--color-text);
+}
+
+.contact-form label {
+  font-weight: 500;
+  display: block;
+  margin: 10px 0 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 15px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: border-color 0.3s, background 0.3s, color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;  /* βοηθάει στο responsive */
+  gap: 20px;        /* ✅ αυτό δίνει το κενό μεταξύ των δύο πεδίων */
+  margin-bottom: 15px;
+}
+
+/* Κάνει τα δύο πεδία να έχουν ίσο πλάτος */
+.form-row > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Για κινητά: τα κάνει κάθετα */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.btn-submit {
+  margin-top: 20px;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #1b7a3e;
+}
+
+/* === ΠΛΗΡΟΦΟΡΙΕΣ === */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 15px var(--color-shadow);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.info-box h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.info-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 960px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .info-box {
+    flex: 1 1 250px;
+  }
+}
+
+/* ===== ΜΗΝΥΜΑ ΕΠΙΤΥΧΙΑΣ / ΛΑΘΟΥΣ / LOADING ===== */
+#formResponse {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.msg-success {
+  color: #22c55e; /* Πράσινο */
+}
+
+.msg-error {
+  color: #ef4444; /* Κόκκινο */
+}
+
+.msg-loading {
+  color: #0ea5e9; /* Μπλε */
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.glow-title {
+  text-align: center;
+  padding: 4px 12px;
+  background: rgba(173, 255, 185, 0.25);     /* απαλό πράσινο */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(85, 255, 105, 0.35);
+  color: #1e293b !important;                 /* 🟢 μαύρα γράμματα */
+  
+}

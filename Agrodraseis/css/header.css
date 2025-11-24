@@ -1,0 +1,107 @@
+/* ===== HEADER ===== */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Κεντρικό header */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  transform: scale(5);
+  transform-origin: left center;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* .nav a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 1000;
+  transition: color 0.25s ease;
+} */
+
+/* .nav a:hover {
+  color: #2a6f2b; 
+}  */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}
+
+/* === HEADER SCROLL ANIMATION === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.site-header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.nav a {
+  position: relative;
+  font-weight: 1000;
+  color: #1e293b;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: 0.3s ease;
+}
+
+.nav a.glow {
+  background: rgba(173, 255, 185, 0.55); /* απαλή πράσινη λάμψη */
+  border-radius: 6px;
+  box-shadow: 0 0 15px rgba(85, 255, 105, 0.6);
+}
+
+.nav a:hover {
+  background: rgba(173, 255, 185, 0.25); /* πιο αχνό πράσινο */
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(85, 255, 105, 0.35); /* μικρότερο blur */
+  padding: 4px 6px; /* μικρότερο πάχος */
+  color: #155e2d;
+}
+

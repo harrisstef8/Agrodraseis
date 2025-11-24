@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrodraseis Site</title>
+  <!-- Εναλλακτικά fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/whyus.css" />
+  <link rel="stylesheet" href="css/stats.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/map.css" />
+  <link rel="stylesheet" href="css/banner.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="stylesheet" href="css/weather_banner.css" />
+
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <ul class="contact-list">
+        <li>
+          <a href="tel:+23943 01 448">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2A19.9 19.9 0 0 1 3.1 4.18 2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72 12.77 12.77 0 0 0 .7 2.81 2 2 0 0 1-.45 2L9.09 9.91a16 16 0 0 0 6 6l1.38-1.38a2 2 0 0 1 2-.45 12.77 12.77 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span>2394301448</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@agrodraseis.com">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 7 8-5H4l8 5zm0 2-8-5v8h16v-8l-8 5z" />
+            </svg>
+            <span>info@agrodraseis.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M22 12a10 10 0 1 0-11.5 9.95v-7.05h-2.2v-2.9h2.2V9.5c0-2.17 1.29-3.37 3.27-3.37.95 0 1.94.17 1.94.17v2.14h-1.09c-1.07 0-1.4.67-1.4 1.35v1.63h2.38l-.38 2.9h-2v7.05A10 10 0 0 0 22 12z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="agrodraseis.html" class="logo">
+        <img src="images/logo_agrodraseis.png" alt="Agro Δράσεις" />
+      </a>
+
+      <nav class="nav">
+        <a href="#hero" class="glow">Αρχική</a>
+        <a href="#why-choose" class="glow">Σχετικά</a>
+        <a href="#services" class="glow">Υπηρεσίες</a>
+        <a href="php/articles.php" class="glow">Νέα</a>
+        <a href="#contact" class="glow">Επικοινωνία</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === WEATHER FLOATING BANNER === -->
+  <div id="weatherBanner" class="weather-banner">
+    <button class="close-btn" id="closeWeather">&times;</button>
+
+    <a href="php/weather.php" class="weather-link">
+      <img id="weatherIcon" alt="εικονίδιο καιρού">
+      <div class="weather-text">
+        <p id="weatherTemp"></p>
+        <p id="weatherDesc"></p>
+      </div>
+    </a>
+  </div>
+
+
+
+
+
+  <!-- Νέα της Ημέρας -->
+  <div id="tipBanner" class="tip-banner">
+    <button class="close-btn" id="closeTip">&times;</button>
+    <h3>Τελευταία νέα</h3>
+    <ul>
+      <li>
+        <br>
+        <br>
+        <a href="php/articles.php">Διαβάστε περισσότερα</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <main>
+    <!-- SECTION HERO -->
+    <section id="hero" class="hero-section">
+      <div class="hero-wrapper">
+        <h1 id="heroTitle" class="typewriter">
+          <span id="line1"></span><br />
+          <span id="line2"></span>
+
+        </h1>
+
+        <p id="subtitle" class="subtitle">
+          Προσφέρουμε ολοκληρωμένες λύσεις για τη βελτίωση της απόδοσης των
+          καλλιεργειών σας με σύγχρονες μεθόδους και επιστημονική τεκμηρίωση.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn green">Δείτε τις Υπηρεσίες μας →</a>
+          <a href="#contact" class="btn brown">Ζητήστε Προσφορά</a>
+        </div>
+
+        <p class="hero-note">✓ Εξυπηρετούμε 600+ αγρότες σε όλη την Ελλάδα</p>
+      </div>
+    </section>
+
+
+    <!-- SECTION SERVICES -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2 class="section-title glow-title">Υπηρεσίες</h2>
+
+        <!-- Κουμπιά / Tabs -->
+        <div class="services-tabs">
+          <button class="tab-btn active" data-target="service5">Δηλώσεις Καλλιέργειας (ΟΣΔΕ)</button>
+          <button class="tab-btn" data-target="service1">Γεωργοοικονομικές Μελέτες</button>
+          <button class="tab-btn" data-target="service2">Γεωργοπεριβαλλοντικά Προγράμματα</button>
+          <button class="tab-btn" data-target="service3">Αδειοδοτήσεις</button>
+          <button class="tab-btn" data-target="service4">Άλλες Παροχές</button>
+        </div>
+
+        <!-- Περιεχόμενο κάθε υπηρεσίας -->
+        <div class="tab-content active" id="service5">
+          <div class="service-flex">
+            <div class="service-img">
+              <img src="images/Service_icon1.jpg" alt="Δηλώσεις Καλλιέργειας ΟΣΔΕ" />
+            </div>
+
+            <div class="service-info">
+              <h3>Δηλώσεις Καλλιέργειας (ΟΣΔΕ)</h3>
+              <p>
+                Αναλαμβάνουμε τη διαδικασία υποβολής και διαχείρισης των Δηλώσεων Καλλιέργειας (ΟΣΔΕ),
+                με υπευθυνότητα και ακρίβεια, ώστε να διασφαλίζεται η πλήρης συμμόρφωση
+                και η έγκαιρη ένταξη στα αγροτικά προγράμματα.
+              </p>
+              <ul>
+                <li>Καταχώρηση και ενημέρωση στοιχείων παραγωγού</li>
+                <li>Χαρτογράφηση αγροτεμαχίων</li>
+                <li>Διαχείριση επιδοτήσεων και ενισχύσεων</li>
+                <li>Συνεχής υποστήριξη σε θέματα ΟΠΕΚΕΠΕ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content " id="service1">
+          <div class="service-flex">
+            <div class="service-img">
+              <img src="images/Service_icon2.jpg" alt="Γεωργοοικονομικές Μελέτες" />
+            </div>
+            <div class="service-info">
+              <h3>Γεωργοοικονομικές Μελέτες</h3>
+              <p>
+                Η εταιρία μας αναλαμβάνει και υλοποιεί μελέτες και προγράμματα που
+                προωθούν και βελτιώνουν την ανάπτυξη και ανταγωνιστικότητα των
+                γεωργοκτηνοτροφικών εκμεταλλεύσεων.
+              </p>
+              <ul>
+                <li>Σχέδια βελτίωσης γεωργοκτηνοτροφικών εκμεταλλεύσεων</li>
+                <li>Εγκατάσταση Νέων Αγροτών</li>
+                <li>Εμπορία & μεταποίηση αγροτικών προϊόντων</li>
+                <li>Μελέτη αγοράς αγροτικής γης με επιδοτούμενο δάνειο</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="tab-content" id="service2">
+          <div class="service-flex ">
+            <div class="service-img">
+              <img src="images/Service_icon3.jpg" alt="Γεωργοπεριβαλλοντικά Προγράμματα" />
+            </div>
+            <div class="service-info">
+              <h3>Γεωργοπεριβαλλοντικά Προγράμματα</h3>
+              <p>
+                Αναλαμβάνουμε και υλοποιούμε προγράμματα που στοχεύουν στη βιώσιμη γεωργία,
+                την προστασία του περιβάλλοντος και τη βελτίωση της παραγωγικότητας μέσω
+                οικολογικών πρακτικών.
+              </p>
+              <ul>
+                <li>Βιολογική Γεωργία – Κτηνοτροφία</li>
+                <li>Μείωση Νιτρορύπανσης</li>
+                <li>Προστασία εδαφών & υδάτων</li>
+                <li>Σπάνιες φυλές και διατήρηση βιοποικιλότητας</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content" id="service3">
+          <div class="service-flex">
+            <div class="service-img">
+              <img src="images/Service_icon4.jpg" alt="Αδειοδοτήσεις">
+            </div>
+
+            <div class="service-info">
+              <h3>Αδειοδοτήσεις</h3>
+              <p>
+                Η εταιρεία μας παρέχει πλήρη υποστήριξη στη διαδικασία αδειοδότησης γεωργικών και
+                κτηνοτροφικών εγκαταστάσεων, με στόχο την ταχύτερη και σωστή ολοκλήρωση κάθε έργου.
+              </p>
+              <ul>
+                <li>Μελέτες περιβαλλοντικών επιπτώσεων</li>
+                <li>Άδειες λειτουργίας γεωργικών και κτηνοτροφικών μονάδων</li>
+                <li>Υποστήριξη σε ενεργειακές άδειες και γεωτρήσεις</li>
+                <li>Διαχείριση φακέλων και παρακολούθηση εγκρίσεων</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content" id="service4">
+          <div class="service-flex">
+            <div class="service-img">
+              <img src="images/Service_icon5.jpg" alt="Άλλες Παροχές" />
+            </div>
+
+            <div class="service-info">
+              <h3>Άλλες Παροχές</h3>
+              <p>
+                Παρέχουμε ολοκληρωμένες υπηρεσίες υποστήριξης αγροτών,
+                προσαρμοσμένες στις ανάγκες κάθε παραγωγού,
+                με στόχο την αποτελεσματική αξιοποίηση πόρων και προγραμμάτων.
+              </p>
+              <ul>
+                <li>Υποστήριξη επιδοτήσεων & προγραμμάτων ΕΣΠΑ</li>
+                <li>Διαχείριση δηλώσεων ΟΣΔΕ</li>
+                <li>Οικονομοτεχνικές μελέτες και συμβουλευτική</li>
+                <li>Ψηφιακές υπηρεσίες για γεωργική ανάπτυξη</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- SECTION WHY US-->
+    <section id="why-choose">
+      <div class="container">
+        <div class="why-content">
+          <div class="why-text">
+            <h2 class="glow-title">Γιατί να επιλέξετε τις <span>Αγροδράσεις;</span></h2>
+            <p>
+              Η Αγροδράσεις αποτελεί την αξιόπιστη επιλογή για κάθε αγρότη και κτηνοτρόφο
+              που επιθυμεί να αυξήσει την παραγωγικότητα και την αποδοτικότητα της επιχείρησής του.
+            </p>
+
+            <ul class="why-list">
+              <li>✓ Εμπειρία άνω των 10 ετών στον αγροτικό τομέα</li>
+              <li>✓ Επιστημονική τεκμηρίωση και σύγχρονες μέθοδοι</li>
+              <li>✓ Εξατομικευμένη προσέγγιση σε κάθε παραγωγό</li>
+              <li>✓ Άμεση ανταπόκριση και τεχνική υποστήριξη</li>
+              <li>✓ Αποδεδειγμένα αποτελέσματα στην αύξηση της απόδοσης</li>
+              <li>✓ Ανταγωνιστικές τιμές και ευέλικτα πακέτα υπηρεσιών</li>
+            </ul>
+          </div>
+
+          <div class="why-card">
+            <h3>600+</h3>
+            <p class="subtitle">Ικανοποιημένοι Πελάτες</p>
+            <p class="description">
+              σε όλη την Βόρεια Ελλάδα εμπιστεύονται τις υπηρεσίες μας για την ανάπτυξη των επιχειρήσεών τους
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ΣΤΑΤΙΣΤΙΚΑ  -->
+    <section id="stats" class="stats-section">
+      <div class="stats-container">
+        <div class="stat-box">
+          <h3 class="counter" data-target="10">0</h3>
+          <p>Έτη Εμπειρίας</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="600">0</h3>
+          <p>Αγρότες</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="5000">0</h3>
+          <p>Στρέμματα</p>
+        </div>
+        <div class="stat-box">
+          <h3 class="counter" data-target="95">0</h3>
+          <p>Επιτυχία</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTACT FORM -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="glow-title">Επικοινωνήστε μαζί μας</h2>
+        <p class="subtitle">
+          Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Φόρμα Επικοινωνίας -->
+          <div class="contact-form">
+            <h3>Στείλτε μας μήνυμα</h3>
+            <p>Θα χαρούμε να σας εξυπηρετήσουμε!</p>
+
+            <form action="php/contact_submit.php" method="POST" id="contactForm">
+              <label for="name">Ονοματεπώνυμο *</label>
+              <input type="text" id="name" name="name" required placeholder="Το όνομά σας" />
+
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="Το email σας" />
+
+              <div class="form-row">
+                <div>
+                  <label for="phone">Τηλέφωνο *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="Το τηλέφωνο σας" />
+                </div>
+
+                <div>
+                  <label for="service">Επιλέξτε Υπηρεσία *</label>
+                  <select id="service" name="service" required>
+                    <option value="">-- Επιλογή Υπηρεσίας --</option>
+                    <option value="Δηλώσεις Καλλιέργειας (ΟΣΔΕ)">Δηλώσεις Καλλιέργειας (ΟΣΔΕ)</option>
+                    <option value="Γεωργοοικονομικές Μελέτες">Γεωργοοικονομικές Μελέτες</option>
+                    <option value="Γεωργοπεριβαλλοντικά Προγράμματα">Γεωργοπεριβαλλοντικά Προγράμματα</option>
+                    <option value="Αδειοδοτήσεις">Αδειοδοτήσεις</option>
+                    <option value="Άλλες Παροχές">Άλλες Παροχές</option>
+                  </select>
+                </div>
+              </div>
+
+              <label for="message">Μήνυμα *</label>
+              <textarea id="message" name="message" required placeholder="Γράψτε το μήνυμά σας εδώ..."></textarea>
+
+              <button type="submit" class="btn-submit">Αποστολή Μηνύματος</button>
+              <!--  εδώ θα εμφανίζεται το μήνυμα -->
+              <div id="formResponse" style="margin-top:15px;font-weight:600;"></div>
+            </form>
+          </div>
+
+          <!-- Πληροφορίες Επικοινωνίας -->
+          <div class="contact-info">
+            <div class="info-box">
+              <h4>Τηλέφωνο</h4>
+              <p>+30 23943 01 448<br>+30 697 482 62 44</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Email</h4>
+              <p>info@agrodraseis.gr</p>
+            </div>
+
+            <div class="info-box">
+              <h4>Διεύθυνση</h4>
+              <p>Χρυσοστόμου Σμύρνης 12<br>57200, Λαγκαδάς</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION MAP -->
+    <section id="map-section">
+      <h2 class="glow-title">Πού θα μας βρείτε</h2>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48359.48023353042!2d23.060272!3d40.751741!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a84b1ca07b5cd5%3A0x2e70315ec31a089d!2zzpHOs8-Bzr_OtM-BzqzPg861zrnPgg!5e0!3m2!1sel!2sgr!4v1761133305316!5m2!1sel!2sgr"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col contact-info">
+        <img src="images/logo_agrodraseis.png" alt="Agro Δράσεις" class="footer-logo" />
+
+
+        <ul class="contact-list">
+          <li>Χρυσοστόμου Σμύρνης 12,<br> Λαγκαδάς, Τ.Κ. 57200</li>
+          <li class="phone-row">
+            Τηλ.:
+            <a href="tel:2394301448">23943 01 448</a>
+          </li>
+
+          <li class="phone-row">
+            Κιν.:
+            <a href="tel:6974826244">697 482 62 44</a>
+          </li>
+          <li><a href="mailto:info@agrodraseis.com">info@agrodraseis.com</a></li>
+          <li><a href="https://www.agrodraseis.com" target="_blank">www.agrodraseis.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Υπηρεσίες</h3>
+        <ul>
+          <li><a href="#services">Γεωργοοικονομικές Μελέτες</a></li>
+          <li><a href="#services">Γεωργοπεριβαλλοντικά Προγράμματα</a></li>
+          <li><a href="#services">Αδειοδοτήσεις</a></li>
+          <li><a href="#services">Άλλες Παροχές</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Εταιρεία</h3>
+        <ul>
+          <li><a href="#why-choose">Σχετικά με εμάς</a></li>
+          <li><a href="#contact">Επικοινωνία</a></li>
+          <li><a href="#">Πολιτική Απορρήτου</a></li>
+          <li><a href="#">Όροι Χρήσης</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h3>Newsletter</h3>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" name="email" placeholder="Το email σας" required>
+          <button type="submit">Εγγραφή</button>
+          <div id="newsletterMessage"></div>
+        </form>
+
+      </div>
+  </footer>
+  <!-- <div class="footer-bottom">
+        <p>© 2025 Agro Δράσεις. Με την επιφύλαξη παντός δικαιώματος.</p>
+      </div> -->
+
+  <script src="js/scroll.js"></script>
+  <script src="js/theme.js" defer></script>
+  <script src="js/contact.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/barmenu.js"></script>
+  <script src="js/banner.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/weather.js"></script>
+
+</body>
+
+</html>

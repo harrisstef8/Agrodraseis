@@ -1,0 +1,93 @@
+/* === STATS SECTION === */
+.stats-section {
+  background: url("../images/stats.jpg") no-repeat center center/cover;
+  position: relative;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Σκίαση για να φαίνονται καθαρά τα νούμερα */
+.stats-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* ημιδιαφανές σκοτείνιασμα */
+  z-index: 1;
+}
+
+/* #stats {
+  background: var(--color-accent2); 
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+} */
+ 
+.stats-section * {
+  position: relative;
+  z-index: 2;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.stat h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-box h3 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
+

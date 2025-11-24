@@ -1,0 +1,61 @@
+:root {
+  --logo-green: #23863a;
+  --topbar-text: #ffffff;
+}
+
+.topbar {
+  background: var(--logo-green);
+  color: var(--topbar-text);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  padding: 8px 0; /* μικρότερο ύψος */
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.contact-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--topbar-text);
+  transition: opacity 0.2s ease;
+}
+
+.contact-list li a:hover {
+  opacity: 0.8;
+}
+
+/* SVG icons */
+.contact-list svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--topbar-text);
+  transition: transform 0.2s ease;
+}
+
+.contact-list a:hover svg {
+  transform: scale(1.1);
+}
+
+/* Κρύψε τα κείμενα σε μικρές οθόνες */
+@media (max-width: 700px) {
+  .contact-list span {
+    display: none;
+  }
+}

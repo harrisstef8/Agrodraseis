@@ -1,0 +1,109 @@
+/* === WHY CHOOSE SECTION === */
+#why-choose {
+  background: var(--color-bg2);
+  color: var(--color-text);
+  padding: 80px 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#why-choose .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Κείμενο */
+.why-text h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.why-text h2 span {
+  color: var(--color-accent);
+}
+
+.why-text p {
+  font-size: 17px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Λίστα */
+.why-list {
+  list-style: none;
+  padding: 0;
+}
+
+.why-list li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 6px;
+}
+
+/* Κάρτα */
+.why-card {
+  background: var(--color-card);
+  color: var(--color-text);
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px var(--color-shadow);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card h3 {
+  font-size: 56px;
+  color: var(--color-accent);
+  margin-bottom: 10px;
+}
+
+.why-card .subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.why-card .description {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .why-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .why-card {
+    max-width: 400px;
+    margin: 30px auto 0;
+  }
+
+  .why-list li {
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+
+
+.glow-title {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(173, 255, 185, 0.25);     /* απαλό πράσινο */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(85, 255, 105, 0.35);
+  color: #1e293b !important;                 /* 🟢 μαύρα γράμματα */
+}

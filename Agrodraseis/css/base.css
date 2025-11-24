@@ -1,0 +1,99 @@
+/* ======== ΒΑΣΙΚΕΣ ΜΕΤΑΒΛΗΤΕΣ ΧΡΩΜΑΤΩΝ ======== */
+:root {
+  /* Light theme */
+  --color-bg: #ffffffdc;
+  --color-bg2: #f1ededb4;
+  --color-text: #1e293b;
+  --color-card: #ffffff;
+  --color-card2: #ffffffde;
+  --color-border: #e2e8f0;
+  --color-accent: #155e2d;
+  --color-accent2: #2d5a3c;
+  --color-accent3: #155e2d;
+  --color-shadow: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --color-bg: #0f172a;
+  --color-bg2: #0b1324;
+  --color-text: #e2e8f0;
+  --color-card: #1e293b;
+  --color-card2: #1e293b;
+  --color-border: #334155;
+  --color-accent: #22c55e;
+  --color-accent2: #2d5a3c;
+  --color-accent3: #155e2d;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* ======== ΚΟΙΝΑ STYLES ΓΙΑ ΟΛΟ ΤΟ SITE ======== */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* === TOGGLE THEME (τελικό - smooth animation, σωστές θέσεις) === */
+.theme-toggle {
+  display: inline-block;
+  position: relative;
+}
+
+/* Κρυφό checkbox */
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Περίβλημα */
+.toggle-slot {
+  position: relative;
+  height: 24px;
+  width: 48px;
+  border: 2px solid var(--color-border, #e4e7ec);
+  border-radius: 50px;
+  background-color: var(--color-card, #fff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Dark background */
+.toggle-checkbox:checked + .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: 0 0 6px rgba(255,255,255,0.3),
+              inset 0 0 0 2px white;
+  transform: translateX(0);
+}
+
+
+/* Κουμπί */
+.toggle-button {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: #ffeccf;
+  box-shadow: inset 0 0 0 2px #ffbb52;
+  transition: transform 0.45s cubic-bezier(.26,2,.46,.71),
+              background-color 0.3s ease, box-shadow 0.3s ease;
+  transform: translateX(0); /* ✅ ξεκινά δεξιά στο light */
+}
+
+/* Dark mode → πάει αριστερά */
+.toggle-checkbox:checked + .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0 0 0 2px white;
+  transform: translateX(0); /* ✅ πάει αριστερά στο dark */
+}
+
+html {
+  scroll-behavior: smooth;
+}

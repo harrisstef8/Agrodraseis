@@ -1,0 +1,194 @@
+.site-footer {
+  background: var(--color-card, #fff);
+  color: var(--color-text, #333);
+  border-top: 1px solid var(--color-border, #ddd);
+  font-family: "Inter", sans-serif;
+  padding: 30px 20px 10px;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+  gap: 20px;
+  align-items: start; /* ✅ όλα ξεκινούν από πάνω, όχι στο κέντρο */
+}
+
+/* Κοινό styling */
+.footer-col h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: var(--color-accent, #155e2d);
+  transition: color 0.3s;
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Στοίχιση τηλεφώνων σε μία γραμμή */
+.phone-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.phone-row span {
+  color: #1b1b1b;
+  width: 45px; /* για να ευθυγραμμιστούν */
+}
+
+.phone-row a {
+  color: #1b7a3e;
+  text-decoration: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: var(--color-text, #333);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.footer-col a:hover {
+  color: var(--color-accent, #155e2d);
+}
+
+/* Πρώτη στήλη */
+.footer-logo {
+  width: 130px;
+  display: block;
+  margin-bottom: -54px;
+  margin-top: -40px;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+/* Newsletter */
+.newsletter p {
+  font-size: 14px;
+  color: var(--color-text, #555);
+  margin-bottom: 12px;
+}
+
+.newsletter input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  height: 42px;
+  box-sizing: border-box;
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #333);
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.newsletter button {
+  background: var(--color-accent, #155e2d);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  height: 42px;
+  box-sizing: border-box;
+  transition: background 0.3s;
+}
+
+.newsletter button:hover {
+  background: #1b833c;
+}
+
+/* Κάτω μέρος */
+.footer-bottom {
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border, #333);
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text, #888);
+  line-height: 1;
+  height: auto;
+  transition: color 0.3s, border 0.3s;
+}
+
+.footer-bottom p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 0 auto;
+  }
+}
+
+/* ===== Extra λεπτομέρειες για dark mode ===== */
+[data-theme="dark"] .newsletter button {
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.4);
+}
+
+[data-theme="dark"] .site-footer {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+}
+
+#newsletterMessage {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.msg-success {
+  color: #22c55e;
+}
+
+.msg-error {
+  color: #ef4444;
+}
+
+.msg-success { color: green; }
+.msg-error { color: red; }
+.msg-loading { color: #555; font-style: italic; }
+
+.site-footer {
+  background: #ffffff; /* ή απαλό πράσινο αν θες */
+  color: #1b1b1b !important;
+}
+
+.footer-col a {
+  color: #1b1b1b !important;
+}
+
+.footer-col a:hover {
+  color: #1b7a3e !important; /* πράσινο hover */
+}
+

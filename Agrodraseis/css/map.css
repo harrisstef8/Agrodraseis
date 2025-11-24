@@ -1,0 +1,37 @@
+#map-section {
+  background: var(--color-bg);
+  padding: 60px 0;
+  text-align: center;
+}
+
+#map-section h2 {
+  color: var(--color-accent);
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.map-container {
+  width: 100%;
+  height: 450px;
+  margin-left: calc(50% - 50vw); /* ✅ κεντράρει πλήρως το full width */
+  border-radius: 0;
+}
+
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.glow-title {
+  position: relative;
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(173, 255, 185, 0.25);     /* απαλό πράσινο */
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(85, 255, 105, 0.35);
+  color: #1e293b !important;                 /* 🟢 μαύρα γράμματα */
+}
