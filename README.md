@@ -35,6 +35,7 @@ https://agrodraseis.great-site.net/Agrodraseis/index.html
 ## Security Notice
 
 All API keys have been removed from this repository for security reasons.  
+The weather page is currently not working because the OpenWeather API key has been removed for security reasons.
 
 ---
 
