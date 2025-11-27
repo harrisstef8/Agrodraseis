@@ -8,18 +8,18 @@ https://agrodraseis.great-site.net/Agrodraseis/index.html
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Dynamic website with PHP & MySQL  
-- ✅ Contact form with email sending using **PHPMailer**
-- ✅ Newsletter subscription system using **Brevo (Sendinblue API)**
-- ✅ Weather data integration using **OpenWeather API**
-- ✅ Responsive design
-- ✅ Secure API key handling (keys removed from public repository)
+-  Dynamic website with PHP & MySQL  
+-  Contact form with email sending using **PHPMailer**
+-  Newsletter subscription system using **Brevo (Sendinblue API)**
+-  Weather data integration using **OpenWeather API**
+-  Responsive design
+-  Secure API key handling (keys removed from public repository)
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -32,15 +32,15 @@ https://agrodraseis.great-site.net/Agrodraseis/index.html
 
 ---
 
-## 🔐 Security Notice
+## Security Notice
 
 All API keys have been removed from this repository for security reasons.  
 
 ---
 
-## 👤 Author **[harrisstef]**  
+## Author **[harrisstef]**  
 
 ---
 
-✅ This project is part of my personal portfolio.
+This project is part of my personal portfolio.
 
